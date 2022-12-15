@@ -4,16 +4,14 @@ const taskSchema = new Schema(
   {
     Nombre: {
       type: String,
-      required: true,
-      unique: false,
-      trim: true
+      
     },
     Estado: {
       type: String,
-      required: true
+      
     },
-    Fecha: {
-      type: Date
+    Tipo: {
+      type: String
     }
   }
 );
