@@ -14,11 +14,7 @@ const taskSchema = new Schema(
     },
     Fecha: {
       type: Date
-    },
-  },
-  {
-    timestamps: false,
-    versionKey: false
+    }
   }
 );
 
