@@ -26,6 +26,9 @@ const taskSchema = new Schema(
     },
   },
   {
+    collection: 'Sensores'
+  },
+  {
     timestamps: true,
     versionKey: false
   }
