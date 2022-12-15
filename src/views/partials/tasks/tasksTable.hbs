@@ -1,25 +1,45 @@
+{{#if tasks}}
 <div class="ex1">
   <table class="table table-bordered table-hover table-dark">
     <thead>
       <tr>
         <th>N.</th>
-        <th>Nombre</th>
-        <th>Estado</th>
-        <th>Tipo</th>
-        
+        <th>Titulo</th>
+        <th>Descripcion</th>
+        <th>Fecha</th>
+        <th>Operaciones</th>
       </tr>
     </thead>
     <tbody>
       {{#each tasks}}
       <tr>
         <td>{{@index}}</td>
-        <td>{{Nombre}}</td>
-        <td>{{Estado}}</td>
-        <td>{{Tipo}}</td>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td>{{fechaContratacion}}</td>
+        <td>
+          {{#if done}}
+          <a href="/done/{{_id}}" class="btn btn-dark">Deshacer</a>
+          {{else}}
+          <a href="/done/{{_id}}" class="btn btn-success">Hecho</a>
+          {{/if}}
+
+          <a href="/edit/{{_id}}" class="btn btn-info">Editar</a>
+          <a href="/delete/{{_id}}" class="btn btn-danger">Eliminar</a>
+        </td>
       </tr>
       {{/each}}
     </tbody>
   </table>
 </div>
 
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>No hay Tareas</h1>
+    <img src="/iconos/tasks.png" alt="nohaytareas" class="w-65">
+  </div>
+</div>
+
+{{/if}}
 

@@ -2,18 +2,34 @@ import { Schema, model } from "mongoose";
 
 const taskSchema = new Schema(
   {
-    Nombre: {
-      type: String
-      
+    title: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true
     },
-    Estado: {
-      type: String
-      
+    description: {
+      type: String,
+      required: true
     },
-    Tipo: {
-      type: String
-    }
+    fechaContratacion: {
+      type: Date,
+      default: Date.now
+    },
+    img: {
+      data: Buffer,
+      contentType: String
+    },
+    done: {
+      type: Boolean,
+      default: false
+    },
+  },
+  {
+    timestamps: true,
+    versionKey: false
   }
 );
 
 export default model("Task", taskSchema);
+
