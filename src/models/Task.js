@@ -3,11 +3,11 @@ import { Schema, model } from "mongoose";
 const taskSchema = new Schema(
   {
     Nombre: {
-      type: String,
+      type: String
       
     },
     Estado: {
-      type: String,
+      type: String
       
     },
     Tipo: {
