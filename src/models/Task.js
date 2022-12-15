@@ -2,31 +2,22 @@ import { Schema, model } from "mongoose";
 
 const taskSchema = new Schema(
   {
-    title: {
+    Nombre: {
       type: String,
       required: true,
-      unique: true,
+      unique: false,
       trim: true
     },
-    description: {
+    Estado: {
       type: String,
       required: true
     },
-    fechaContratacion: {
-      type: Date,
-      default: Date.now
-    },
-    img: {
-      data: Buffer,
-      contentType: String
-    },
-    done: {
-      type: Boolean,
-      default: false
+    Fecha: {
+      type: Date
     },
   },
   {
-    timestamps: true,
+    timestamps: false,
     versionKey: false
   }
 );

@@ -14,19 +14,9 @@
       {{#each tasks}}
       <tr>
         <td>{{@index}}</td>
-        <td>{{title}}</td>
-        <td>{{description}}</td>
-        <td>{{fechaContratacion}}</td>
-        <td>
-          {{#if done}}
-          <a href="/done/{{_id}}" class="btn btn-dark">Deshacer</a>
-          {{else}}
-          <a href="/done/{{_id}}" class="btn btn-success">Hecho</a>
-          {{/if}}
-
-          <a href="/edit/{{_id}}" class="btn btn-info">Editar</a>
-          <a href="/delete/{{_id}}" class="btn btn-danger">Eliminar</a>
-        </td>
+        <td>{{Nombre}}</td>
+        <td>{{Estado}}</td>
+        <td>{{Fecha}}</td>
       </tr>
       {{/each}}
     </tbody>
